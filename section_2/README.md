@@ -170,25 +170,31 @@ if __name__ == "__main__":
 
 <div align=center>
     <img src="./cameraman.png" width="100">
-    <img src="./cameraman_1.png" width="100">
-    <img src="./cameraman_2.png" width="100">
-    <img src="./cameraman_3.png" width="100">
-    <img src="./cameraman_5.png" width="100">
+    <img src="./img/cameraman_1.png" width="100">
+    <img src="./img/cameraman_2.png" width="100">
+    <img src="./img/cameraman_3.png" width="100">
+    <img src="./img/cameraman_5.png" width="100">
+</div>
+<div align=center>
     <img src="./einstein.png" width="100">
-    <img src="./einstein_1.png" width="100">
-    <img src="./einstein_2.png" width="100">
-    <img src="./einstein_3.png" width="100">
-    <img src="./einstein_5.png" width="100">
+    <img src="./img/einstein_1.png" width="100">
+    <img src="./img/einstein_2.png" width="100">
+    <img src="./img/einstein_3.png" width="100">
+    <img src="./img/einstein_5.png" width="100">
+</div>
+<div align=center>
     <img src="./lena.png" width="100">
-    <img src="./lena_1.png" width="100">
-    <img src="./lena_2.png" width="100">
-    <img src="./lena_3.png" width="100">
-    <img src="./lena_5.png" width="100">
+    <img src="./img/lena_1.png" width="100">
+    <img src="./img/lena_2.png" width="100">
+    <img src="./img/lena_3.png" width="100">
+    <img src="./img/lena_5.png" width="100">
+</div>
+<div align=center>
     <img src="./mandril.png" width="100">
-    <img src="./mandril_1.png" width="100">
-    <img src="./mandril_2.png" width="100">
-    <img src="./mandril_3.png" width="100">
-    <img src="./mandril_5.png" width="100">
+    <img src="./img/mandril_1.png" width="100">
+    <img src="./img/mandril_2.png" width="100">
+    <img src="./img/mandril_3.png" width="100">
+    <img src="./img/mandril_5.png" width="100">
 </div>
 
 上图中左侧第一列为原始图片，其右侧均为高斯滤波后的结果，由左至右Sigma的数值依次增大，分别为1、 2 、3 、5.可以清晰地看出，随着Sigma的增大，图像模糊程度递增，显示出的尺度逐渐变大。
@@ -196,10 +202,10 @@ if __name__ == "__main__":
 * 与直接调用函数的效果对比(Sigma=1)
 
 <div align=center>
-    <img src="./cameraman_sub.png" width="100">
-    <img src="./einstein_sub.png" width="100">
-    <img src="./lena_sub.png" width="100">
-    <img src="./mandril_sub.png" width="100">
+    <img src="./img/cameraman_sub.png" width="100">
+    <img src="./img/einstein_sub.png" width="100">
+    <img src="./img/lena_sub.png" width="100">
+    <img src="./img/mandril_sub.png" width="100">
 </div>
 
 通过与直接调用函数的结果求差值图像，可以发现，二者差异相当小，差值图像几乎全黑。为进一步细致对比，输出差值矩阵，观察发现差值最大为1.
@@ -207,25 +213,29 @@ if __name__ == "__main__":
 * 不同Padding方式在边界上的差别对比
 
 <div align=center>
-    <img src="./lena_1.png" width="120">
-    <img src="./lena_2.png" width="120">
-    <img src="./lena_3.png" width="120">
-    <img src="./lena_5.png" width="120">
-    <img src="./lena_rep_1.png" width="120">
-    <img src="./lena_rep_2.png" width="120">
-    <img src="./lena_rep_3.png" width="120">
-    <img src="./lena_rep_5.png" width="120">
+    <img src="./img/lena_1.png" width="120">
+    <img src="./img/lena_2.png" width="120">
+    <img src="./img/lena_3.png" width="120">
+    <img src="./img/lena_5.png" width="120">
+</div>
+<div align=center>
+    <img src="./img/lena_rep_1.png" width="120">
+    <img src="./img/lena_rep_2.png" width="120">
+    <img src="./img/lena_rep_3.png" width="120">
+    <img src="./img/lena_rep_5.png" width="120">
 </div>
 
 <div align=center>
-    <img src="./mandril_1.png" width="120">
-    <img src="./mandril_2.png" width="120">
-    <img src="./mandril_3.png" width="120">
-    <img src="./mandril_5.png" width="120">
-    <img src="./mandril_rep_1.png" width="120">
-    <img src="./mandril_rep_2.png" width="120">
-    <img src="./mandril_rep_3.png" width="120">
-    <img src="./mandril_rep_5.png" width="120">
+    <img src="./img/mandril_1.png" width="120">
+    <img src="./img/mandril_2.png" width="120">
+    <img src="./img/mandril_3.png" width="120">
+    <img src="./img/mandril_5.png" width="120">
+</div>
+<div align=center>
+    <img src="./img/mandril_rep_1.png" width="120">
+    <img src="./img/mandril_rep_2.png" width="120">
+    <img src="./img/mandril_rep_3.png" width="120">
+    <img src="./img/mandril_rep_5.png" width="120">
 </div>
 
 本部分使用lena和mandril两个图在不同padding方法下的效果进行对比分析。第1 、3行为补零方式，第2、 4行为像素复制方式；由左至右高斯滤波的Sigma值递增，为1 、2 、3和5.可以看到，相比像素复制方式，补零方式的结果图的图像边界上存在黑边，且随着Sigma的增大，黑边变宽。理论上分析，这是因为采用补零方式进行Padding时，边界周围元素均填充0，在卷积时会直接影响边界元素的数值，拉低边界元素的整体数值，从而体现为黑边。同时，随着卷积核尺寸的增加，受填充像素影响的边界元素数量增加，进而体现为黑边变宽。
